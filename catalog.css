@@ -1,0 +1,55 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+header ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    align-items: center;
+}
+li{
+    margin:0;
+    text-align: center;
+}
+.head1{
+    display: inline;
+}
+p{
+    margin-left: 20px;
+}
+header button{
+    margin-right: 20px;
+}
+header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-header{
+    margin: 0;
+}
+.card-width{
+    width: 250px;
+    margin: 0;
+    padding: 20;
+} 
+.card-body button{
+    justify-content: center;
+}
+ul{
+    list-style-type: none;
+}
+.display-6{
+    color: grey;
+    margin-bottom: 10px;
+}
+.display-6 b{
+    color: black;
+}
+body{
+    margin-bottom: 2rem;
+    
+}
