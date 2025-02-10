@@ -1,7 +1,6 @@
 body {
     background-color: #f8f9fa;
 }
-
 .cart-items .cart-item {
     background-color: #fff;
     padding: 15px;
@@ -20,7 +19,6 @@ li{
     margin:0;
     text-align: center;
 }
-
 header{
     height: 60px;
     display: flex;
@@ -30,15 +28,12 @@ header{
 .cart-items .cart-item h4 {
     font-weight: 500;
 }
-
 .cart-summary h4 {
     font-weight: 600;
 }
-
 .cart-summary button {
     width: 100%;
 }
-
 .cart-item input[type="radio"] {
     width: 20px;
     height: 20px;
