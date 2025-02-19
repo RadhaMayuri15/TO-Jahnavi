@@ -1,0 +1,32 @@
+body {
+    background-color: #d5ecf7;
+    font-family: Arial, sans-serif;
+}
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+.hero-content {
+    max-width: 500px;
+
+}
+.hero-image {
+    max-width: 500px;
+}
+.feature-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin: 10px;
+    margin-bottom: 40px;
+    background-color: #a6a7a8;
+    color: rgb(1, 23, 31);
+    
+}
+.feature-card h3{
+    margin-top: 20px;
+}

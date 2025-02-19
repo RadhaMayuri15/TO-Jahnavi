@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatHive - Catalog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #d5ecf7;
+            font-family: Arial, sans-serif;
+        }
+
+        .catalog-item {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">ChatHive</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Choose Your Plan</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="catalog-item">
+                    <h3>Basic Plan</h3>
+                    <p>$5/month</p>
+                    <p>Limited access to features</p>
+                    <button class="btn btn-primary" onclick="addToCart('Basic Plan', 5)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="catalog-item">
+                    <h3>Pro Plan</h3>
+                    <p>$10/month</p>
+                    <p>Full access to features</p>
+                    <button class="btn btn-primary" onclick="addToCart('Pro Plan', 10)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="catalog-item">
+                    <h3>Enterprise Plan</h3>
+                    <p>$20/month</p>
+                    <p>Dedicated support & custom solutions</p>
+                    <button class="btn btn-primary" onclick="addToCart('Enterprise Plan', 20)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="catalog-item">
+                    <h3>Premium Plan</h3>
+                    <p>$30/month</p>
+                    <p>Advanced features with unlimited users</p>
+                    <button class="btn btn-primary" onclick="addToCart('Premium Plan', 30)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="catalog-item">
+                    <h3>Team Plan</h3>
+                    <p>$50/month</p>
+                    <p>Collaborative tools for teams</p>
+                    <button class="btn btn-primary" onclick="addToCart('Team Plan', 50)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="catalog-item">
+                    <h3>Developer Plan</h3>
+                    <p>$15/month</p>
+                    <p>API access and developer tools</p>
+                    <button class="btn btn-primary" onclick="addToCart('Developer Plan', 15)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add to Cart functionality
+        function addToCart(planName, price) {
+            const item = {
+                plan: planName,
+                price: price
+            };
+
+            // Get cart from localStorage, if it exists
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add new item to the cart
+            cart.push(item);
+
+            // Save cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Alert the user
+            alert(`${item.plan} has been added to your cart.`);
+        }
+    </script>
+</body>
+
+</html>
